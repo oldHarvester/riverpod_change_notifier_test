@@ -33,7 +33,7 @@ class _ChangeNotifierTestPageState
           listenable: _controller,
           builder: (context, child) {
             final state = _controller.state;
-            debugPrint('${_controller.runtimeType} changed - $state');
+            debugPrint('${_controller.runtimeType} changed in widget - $state');
             return switch (state) {
               InitialState _ => const Text('initial'),
               LoadingState _ => const CircularProgressIndicator(),

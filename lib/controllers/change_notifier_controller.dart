@@ -12,7 +12,7 @@ class ChangeNotifierController extends ChangeNotifier {
   }
 
   Future<void> updateNumber(int number) async {
-    debugPrint('$runtimeType update - $number');
+    debugPrint('$runtimeType update - $number state: $state');
     changeState(LoadingState());
     await Future.delayed(
       const Duration(seconds: 1),

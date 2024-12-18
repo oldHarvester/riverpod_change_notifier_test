@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:state_change_test/change_notifier_test.dart';
-import 'package:state_change_test/notifier_test_page.dart';
-import 'package:state_change_test/riverpod_change_notifier_test.dart';
+import 'package:state_change_test/pages/bloc_test_page.dart';
+import 'package:state_change_test/pages/change_notifier_test.dart';
+import 'package:state_change_test/pages/notifier_test_page.dart';
+import 'package:state_change_test/pages/riverpod_change_notifier_test.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -19,6 +20,7 @@ class _HomePageState extends State<HomePage> {
           ChangeNotifierTestPage(),
           NotifierTestPage(),
           RiverpodChangeNotifierTestPage(),
+          BlocTestPage(),
         ],
       ),
     );
