@@ -1,6 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:state_change_test/controllers/state.dart';
+import 'package:state_change_test/controllers/change_notifier_controller.dart';
 
 final riverpodChangeNotifierProvider = ChangeNotifierProvider(
   (ref) {
@@ -8,22 +7,4 @@ final riverpodChangeNotifierProvider = ChangeNotifierProvider(
   },
 );
 
-class RiverpodChangeNotifierController extends ChangeNotifier {
-  UiState _state = InitialState();
-
-  UiState get state => _state;
-
-  void changeState(UiState state) {
-    _state = state;
-    notifyListeners();
-  }
-
-  Future<void> updateNumber(int number) async {
-    debugPrint('$runtimeType update - $number');
-    changeState(LoadingState());
-    await Future.delayed(
-      const Duration(seconds: 1),
-    );
-    changeState(DataState(number: number));
-  }
-}
+class RiverpodChangeNotifierController extends ChangeNotifierController {}

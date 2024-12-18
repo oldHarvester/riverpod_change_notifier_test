@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-sealed class UiState extends Equatable {
+abstract class UiState extends Equatable {
   @override
   List<Object?> get props => [];
 }
